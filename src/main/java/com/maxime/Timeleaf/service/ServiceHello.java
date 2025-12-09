@@ -28,4 +28,12 @@ public class ServiceHello {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
+    public Model getmodelbyid (Long id){
+        for (Model a : listModel){
+            if (a.getId()==id){
+                return a;
+            }
+        }
+        return null;
+    }
 }

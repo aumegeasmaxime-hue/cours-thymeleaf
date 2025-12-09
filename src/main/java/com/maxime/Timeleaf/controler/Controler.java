@@ -5,6 +5,7 @@ import com.maxime.Timeleaf.service.ServiceHello;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class Controler {
@@ -28,5 +29,12 @@ public class Controler {
         return "model";
 
     }
+    @GetMapping("/model/{id}")
+    public String getDetails (Model model,@PathVariable Long id){
+        model.addAttribute("model", serviceHello.getmodelbyid(id));
+        return "modelDetail";
+
+    }
+
 
 }

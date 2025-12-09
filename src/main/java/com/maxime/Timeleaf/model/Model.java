@@ -1,7 +1,7 @@
 package com.maxime.Timeleaf.model;
 
 public class Model {
-    private long id;
+    private Long id;
     private  String prenom;
     private  int age;
 
